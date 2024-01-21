@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid Pinterest </title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 1rem;
+            grid-auto-flow: dense;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .horizontal {
+            grid-column: auto / span 2;
+        }
+
+        .vertical {
+            grid-row: auto / span 2 ;
+        }
+
+        .big {
+            grid-column: auto / span 2;
+            grid-row: auto / span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="horizontal" src="./Images/short.jpg" alt="Horizontal Image">
+        <img class="horizontal" src="./Images/short-2.jpg" alt="Horizontal Image">
+        <img class="horizontal" src="./Images/short-3.jpg" alt="Horizontal Image">
+        <img class="big" src="./Images/square.jpg" alt="Big Image">
+        <img class="big" src="./Images/sq-2.jpg" alt="Big Image">
+        <img class="big" src="./Images/sq-3.jpg" alt="Big Image">
+        <img class="vertical" src="./Images/tall.jpg" alt="Vertical Image">
+        <img class="vertical" src="./Images/tall-2.jpg" alt="Vertical Image">
+        <img class="vertical" src="./Images/tall-3.jpg" alt="Vertical Image">
+        <img class="vertical" src="./Images/tall-4.jpg" alt="Vertical Image">
+    </div>
+</body>
+</html>
